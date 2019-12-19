@@ -99,7 +99,7 @@ public abstract class ES6Iterator extends IdScriptableObject {
 
     @Override
     protected int findPrototypeId(String s) {
-        if ("next".equals(s)) {
+        if (NEXT_METHOD.equals(s)) {
             return Id_next;
         }
         return 0;
@@ -146,4 +146,5 @@ public abstract class ES6Iterator extends IdScriptableObject {
     public static final String DONE_PROPERTY = "done";
     public static final String RETURN_PROPERTY = "return";
     public static final String VALUE_PROPERTY = "value";
+    public static final String RETURN_METHOD = "return";
 }
